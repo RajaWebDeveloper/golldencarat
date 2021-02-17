@@ -358,7 +358,7 @@ Navbar Area
 .navbar-light .navbar-brand img {
   float: left;
   padding: 10px 0;
-  width: 175px;
+  width: 175px !important;
 }
 
 .navbar-light .navbar-brand-sticky {
