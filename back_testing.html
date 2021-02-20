@@ -181,11 +181,22 @@
                                                             </div>
                                                         </div>
 
+                                                        <div class="col-12">
+                                                                <a class="forget" href="#">Forgot password?</a>
+                                                        </div>
+
                                                         <div class="col-lg-12 col-md-12 text-center login_button">
                                                             <button type="button" class="default-btn" onclick="return check_auth();">
                                                                 Sign In Now
                                                                 <i class='bx bx-plus'></i>
                                                             </button>
+                                                        </div>
+
+                                                        <div class="col-12">
+                                                            <p class="account-desc">
+                                                                Not a member?
+                                                                <a href="#" id="register-form-link_1">Signup</a>
+                                                            </p>
                                                         </div>
 
                                                     </div>
@@ -481,6 +492,22 @@
             $('#login-form-link').parent().removeClass('active_1');
             $(this).addClass('active');
             $(this).parent().addClass('active_1');
+
+            $('.err_log_result').remove();
+            $('.success_log_result').remove();
+            $('.err_result').remove();
+            $('.success_result').remove();
+
+            e.preventDefault();
+        });
+
+        $('#register-form-link_1').click(function(e) {
+            $("#register-form").delay(100).fadeIn(100);
+            $("#login-form").fadeOut(100);
+            $('#login-form-link').removeClass('active');
+            $('#login-form-link').parent().removeClass('active_1');
+            $('#register-form-link').addClass('active');
+            $('#register-form-link').parent().addClass('active_1');
 
             $('.err_log_result').remove();
             $('.success_log_result').remove();
