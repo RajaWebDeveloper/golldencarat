@@ -146,9 +146,6 @@
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <div class="mission-img">
-                            <img src="assets/images/logo_2.png" alt="Images" class="side_image">
-                        </div>
                         <div class="text-center">
                             <h3 style="font-size: 36px;">Start your</h3>
                             <h2 class="h2-color">Backtesting Here</h2>
@@ -245,6 +242,13 @@
                                                                 Sign Up
                                                                 <i class='bx bx-plus'></i>
                                                             </button>
+                                                        </div>
+
+                                                        <div class="col-12">
+                                                            <p class="account-desc">
+                                                                Already have an account?
+                                                                <a href="#" class="active" id="login-form-link_1">Sign In</a>
+                                                            </p>
                                                         </div>
 
 
@@ -495,6 +499,24 @@
 
             e.preventDefault();
         });
+
+        $('#login-form-link_1').click(function(e) {
+            $("#login-form").delay(100).fadeIn(100);
+            $("#register-form").fadeOut(100);
+            $('#register-form-link').removeClass('active');
+            $('#register-form-link').parent().removeClass('active_1');
+            $('#login-form-link').addClass('active');
+            $('#login-form-link').parent().addClass('active_1');
+
+            $('.err_log_result').remove();
+            $('.success_log_result').remove();
+            $('.err_result').remove();
+            $('.success_result').remove();
+
+            e.preventDefault();
+        });
+
+
         $('#register-form-link').click(function(e) {
             $("#register-form").delay(100).fadeIn(100);
             $("#login-form").fadeOut(100);
