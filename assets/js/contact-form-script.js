@@ -27,14 +27,17 @@
 
         $.ajax({
             type: "POST",
-            url: "assets/php/form-process.php",
-            data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&phone_number=" + phone_number + "&message=" + message,
+            url: "http://3.6.152.202/algo/enquiry/new/",
+            data: "full_name=" + name + "&email=" + email + "&subject=" + msg_subject + "&phone=" + phone_number + "&message=" + message,
             success : function(text){
-                if (text == "success"){
-                    formSuccess();
-                } else {
+                console.log(text);
+                if (text.response_code == 1001){
                     formError();
-                    submitMSG(false,text);
+                    submitMSG(false,text.errors[0].data);
+
+                } else {
+                    formSuccess();
+
                 }
             }
         });

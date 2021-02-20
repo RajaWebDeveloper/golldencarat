@@ -91,12 +91,20 @@
         Blog
        </a>
       </li>
-      <li class="nav-item">
-       <a href="contact.html" class="nav-link active">
-        Contact
-       </a>
-      </li>
      </ul>
+
+     <div class="side-nav d-in-line align-items-center">
+
+
+      <div class="side-item">
+       <div class="nav-add-btn">
+        <a href="contact.html" class="nav-menu-btn">
+         Contact us
+         <i class='bx bx-plus'></i>
+        </a>
+       </div>
+      </div>
+     </div>
 
     </div>
    </nav>
@@ -163,7 +171,7 @@
         <div class="col-lg-6 col-sm-6">
          <div class="form-group">
           <i class='bx bx-user'></i>
-          <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name*">
+          <input type="text" name="full_name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name*">
           <div class="help-block with-errors"></div>
          </div>
         </div>
@@ -177,14 +185,14 @@
         <div class="col-lg-6 col-sm-6">
          <div class="form-group">
           <i class='bx bx-phone'></i>
-          <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Your Phone">
+          <input type="text" name="phone" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Your Phone">
           <div class="help-block with-errors"></div>
          </div>
         </div>
         <div class="col-lg-6 col-sm-6">
          <div class="form-group">
           <i class='bx bx-file'></i>
-          <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Your Subject">
+          <input type="text" name="subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Your Subject">
           <div class="help-block with-errors"></div>
          </div>
         </div>
@@ -195,7 +203,7 @@
           <div class="help-block with-errors"></div>
          </div>
         </div>
-        <div class="col-lg-12 col-md-12">
+        <div class="col-lg-12 col-md-12 contact_button">
          <button type="submit" class="default-btn border-radius">
           Send Message
           <i class='bx bx-plus'></i>
@@ -221,16 +229,16 @@
       <h3>Services</h3>
       <ul class="footer-list">
        <li>
-        <a href="#">ALGO TRADING</a>
+        <a href="algo_trading.html">Algo Trading</a>
        </li>
        <li>
-        <a href="#">BACKTESTING</a>
+        <a href="back_testing.html">Backtesting</a>
        </li>
        <li>
-        <a href="#">PAPER TRADE</a>
+        <a href="paper_trading.html">Paper Trade</a>
        </li>
        <li>
-        <a href="#">HEDGE FUND TRADE</a>
+        <a href="hedge_fund_trade.html">Hedge Fund Trade</a>
        </li>
 
       </ul>
@@ -279,7 +287,7 @@
       <h3>Newsletter</h3>
       <p>Subscribe our email newsletter today to receive updates.</p>
       <div class="newsletter-area">
-       <form class="newsletter-form" data-toggle="validator" method="POST">
+       <form class="newsletter-form" data-toggle="validator" method="post">
         <input type="email" class="form-control" placeholder="Your Email*" name="EMAIL" required autocomplete="off">
         <button class="default-btn" type="submit">
          Subscribe
@@ -321,5 +329,46 @@
 
 <script src="assets/js/custom.js"></script>
 </body>
+
+<script>
+ $(document).ready(function(){
+  $("form").submit(function(){
+   var name = $('#name').val();
+   var email = $('#email').val();
+   var phone = $('#phone_number').val();
+   var subject = $('#msg_subject').val();
+   var message = $('#message').val();
+
+   $("#contactForm .row .col-lg-6.col-sm-6").each((i, e) => {
+    let $e = $(e);
+
+    // guard to exclude elements with class 'has-error'
+    if ($e.hasClass('has-error')){
+     return false;
+    }else{
+     var form = $('#contactForm');
+     $.ajax({
+      type: "POST",
+      url: 'http://3.6.152.202/algo/enquire/new',
+      data: form.serialize(),
+      success: function(data)
+      {
+       $('.err_log_result').remove();
+       $('.success_log_result').remove();
+       if(data.response_code == 1001){
+        $('<div class="text-center err_log_result col-lg-12 col-md-12"><p>'+data.errors[0].data+'</p></diV>').insertBefore('.contact_button');
+       }else{
+        form.trigger("reset");
+        $('<div class="text-center success_log_result col-lg-12 col-md-12"><p>Request Send Successful</p></diV>').insertBefore('.contact_button');
+       }
+      }
+     });
+    }
+   });
+
+
+  });
+ });
+</script>
 
 </html>
