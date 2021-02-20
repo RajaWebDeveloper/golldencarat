@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cd3851d-f10f-4873-b4db-361930f46929" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back_testing.html" beforeDir="false" afterPath="$PROJECT_DIR$/back_testing.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/back_testing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="584" column="23" selection-start-line="584" selection-start-column="23" selection-end-line="584" selection-end-column="23" />
+            <state relative-caret-position="23">
+              <caret line="518" column="26" lean-forward="true" selection-start-line="518" selection-start-column="26" selection-end-line="518" selection-end-column="26" />
               <folding>
                 <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" />
@@ -30,19 +29,6 @@
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algo_trading.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2438">
-              <caret line="106" selection-start-line="106" selection-end-line="196" selection-end-column="6" />
-              <folding>
-                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -75,7 +61,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="950" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
@@ -131,12 +117,12 @@
       <workItem from="1613668032429" duration="2283000" />
       <workItem from="1613751681212" duration="4880000" />
       <workItem from="1613794142582" duration="6345000" />
-      <workItem from="1613801397198" duration="105000" />
+      <workItem from="1613801397198" duration="257000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13613000" />
+    <option name="totallyTimeSpent" value="13765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -235,8 +221,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/back_testing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="584" column="23" selection-start-line="584" selection-start-column="23" selection-end-line="584" selection-end-column="23" />
+        <state relative-caret-position="23">
+          <caret line="518" column="26" lean-forward="true" selection-start-line="518" selection-start-column="26" selection-end-line="518" selection-end-column="26" />
           <folding>
             <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" />
