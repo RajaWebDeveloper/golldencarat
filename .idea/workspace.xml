@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cd3851d-f10f-4873-b4db-361930f46929" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back_testing.html" beforeDir="false" afterPath="$PROJECT_DIR$/back_testing.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,15 +15,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/back_testing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4117">
-              <caret line="185" column="98" selection-start-line="185" selection-start-column="98" selection-end-line="185" selection-end-column="98" />
+            <state relative-caret-position="426">
+              <caret line="516" column="8" selection-start-line="516" selection-start-column="8" selection-end-line="516" selection-end-column="8" />
               <folding>
                 <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="e#19729#20157#0" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
@@ -56,6 +53,8 @@
     <findStrings>
       <find>We Serve As Possible That You Expected</find>
       <find>form</find>
+      <find>login-form-link</find>
+      <find>login-form</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,12 +129,12 @@
       <updated>1613668030479</updated>
       <workItem from="1613668032429" duration="2283000" />
       <workItem from="1613751681212" duration="4880000" />
-      <workItem from="1613794142582" duration="3126000" />
+      <workItem from="1613794142582" duration="6299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10289000" />
+    <option name="totallyTimeSpent" value="13462000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -245,15 +244,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/back_testing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4117">
-          <caret line="185" column="98" selection-start-line="185" selection-start-column="98" selection-end-line="185" selection-end-column="98" />
+        <state relative-caret-position="426">
+          <caret line="516" column="8" selection-start-line="516" selection-start-column="8" selection-end-line="516" selection-end-column="8" />
           <folding>
             <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#19729#20157#0" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
