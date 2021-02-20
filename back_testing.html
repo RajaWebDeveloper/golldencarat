@@ -60,6 +60,7 @@
         }
 
     </style>
+    <script src="../../aquinova_1/functionality_js/register.js"></script>
 </head>
 <body>
 
@@ -157,18 +158,18 @@
                                                         <div class="col-lg-12 ">
                                                             <div class="form-group">
                                                                 <i class='bx bx-user'></i>
-                                                                <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your Username or Email" placeholder="Username or Email">
+                                                                <input type="text" name="name" id="login_name" class="form-control" required data-error="Please enter your Email" placeholder="Username or Email">
                                                             </div>
                                                         </div>
                                                         <div class="col-12">
                                                             <div class="form-group">
                                                                 <i class='bx bx-lock-alt'></i>
-                                                                <input class="form-control" type="password" name="password" placeholder="Password">
+                                                                <input class="form-control" id="login_password" type="password" name="password" placeholder="Password" required data-error="Please enter your Password">
                                                             </div>
                                                         </div>
 
                                                         <div class="col-lg-12 col-md-12 text-center">
-                                                            <button type="submit" class="default-btn">
+                                                            <button type="button" class="default-btn" onclick="return check_auth();">
                                                                 Sign In Now
                                                                 <i class='bx bx-plus'></i>
                                                             </button>
@@ -182,23 +183,29 @@
                                                         <div class="col-lg-12 ">
                                                             <div class="form-group">
                                                                 <i class='bx bx-user'></i>
-                                                                <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your Username" placeholder="Username">
+                                                                <input type="text" name="full_name" id="reg_name" class="form-control" required data-error="Please enter your Username" placeholder="Username">
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-12">
                                                             <div class="form-group">
                                                                 <i class='bx bx-mail-send'></i>
-                                                                <input type="email" name="email" id="email" class="form-control" required data-error="Please enter email" placeholder="Email">
+                                                                <input type="email" name="email" id="reg_email" class="form-control" required data-error="Please enter email" placeholder="Email">
                                                             </div>
                                                         </div>
                                                         <div class="col-12">
                                                             <div class="form-group">
                                                                 <i class='bx bx-lock-alt'></i>
-                                                                <input class="form-control" type="password" name="password" placeholder="Password">
+                                                                <input class="form-control" type="number" id="reg_phone" name="phone" placeholder="Phone Number">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="form-group">
+                                                                <i class='bx bx-lock-alt'></i>
+                                                                <input class="form-control" type="password" id="reg_password" name="password" placeholder="Password">
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-12 col-md-12 text-center">
-                                                            <button type="submit" class="default-btn">
+                                                            <button type="button" class="default-btn" onclick="return check_reg();">
                                                                 Sign Up
                                                                 <i class='bx bx-plus'></i>
                                                             </button>
@@ -451,8 +458,106 @@
             $(this).parent().addClass('active_1');
             e.preventDefault();
         });
-
     });
+
+    function check_auth(){
+            var form = $('#login-form-link');
+
+            var name = $('#login_name').val();
+            var password = $('#login_password').val();
+
+            $('#login_name').next(".red").remove();
+            $('#login_password').next(".red").remove();
+
+
+            if(name == ''){
+
+                $("<span class='red' style='color: red;'>User Email Required</span>").insertAfter('#login_name');
+                $('#login_name').focus();
+                return false;
+            }else{
+                $('#login_name').next(".red").remove();
+            }
+
+            if(password == ''){
+                $("<span class='red' style='color: red;'>Password Required</span>").insertAfter('#login_password');
+                $('#login_password').focus();
+                return false;
+            }else{
+                $('#login_password').next(".red").remove();
+            }
+
+
+            $.ajax({
+                type: "POST",
+                url: 'http://3.6.152.202/algo/auth/login/',
+                data: form.serialize(),
+                success: function(data)
+                {
+                    console.log(data)
+                }
+            });
+
+    }
+
+    function check_reg(){
+        var form = $('#register-form-link');
+
+        var name = $('#reg_name').val();
+        var password = $('#reg_password').val();
+        var email = $('#reg_email').val();
+        var phone = $('#reg_phone').val();
+
+        $('#reg_name').next(".red").remove();
+        $('#reg_password').next(".red").remove();
+        $('#reg_email').next(".red").remove();
+        $('#reg_phone').next(".red").remove();
+
+
+        if(name == ''){
+            $("<span class='red' style='color: red;'>User Name Required</span>").insertAfter('#reg_name');
+            $('#reg_name').focus();
+            return false;
+        }else{
+            $('#reg_name').next(".red").remove();
+        }
+
+        if(email == ''){
+            $("<span class='red' style='color: red;'>User Email Required</span>").insertAfter('#reg_email');
+            $('#reg_email').focus();
+            return false;
+        }else{
+            $('#reg_email').next(".red").remove();
+        }
+
+        if(phone == ''){
+            $("<span class='red' style='color: red;'>User Phone Number Required</span>").insertAfter('#reg_phone');
+            $('#reg_phone').focus();
+            return false;
+        }else{
+            $('#reg_phone').next(".red").remove();
+        }
+
+        if(password == ''){
+            $("<span class='red' style='color: red;'>Password Required</span>").insertAfter('#reg_password');
+            $('#reg_password').focus();
+            return false;
+        }else{
+            $('#reg_password').next(".red").remove();
+        }
+
+
+        $.ajax({
+            type: "POST",
+            url: 'http://3.6.152.202/algo/auth/signup/',
+            data: form.serialize(),
+            success: function(data)
+            {
+                console.log(data)
+            }
+        });
+
+    }
 </script>
 
 </body>
